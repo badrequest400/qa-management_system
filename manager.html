@@ -1,0 +1,73 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module manager</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>manager</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/bacseh/Documents/QA/425-Designing OO program/management_system/manager.py">/Users/bacseh/Documents/QA/425-Designing OO program/management_system/manager.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="manager.html#Manager">Manager</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Manager">class <strong>Manager</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;for&nbsp;main&nbsp;manager&nbsp;system<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Manager-__init__"><strong>__init__</strong></a>(self, items<font color="#909090">=[]</font>, subscribers<font color="#909090">=[]</font>)</dt><dd><tt>Constructs&nbsp;a&nbsp;manager&nbsp;object,&nbsp;there&nbsp;should&nbsp;be&nbsp;only&nbsp;one&nbsp;in&nbsp;the&nbsp;program<br>
+:param&nbsp;items&nbsp;Array:&nbsp;&nbsp;Array&nbsp;of&nbsp;references&nbsp;of&nbsp;type&nbsp;Item<br>
+:param&nbsp;subscribers&nbsp;Array:&nbsp;&nbsp;Array&nbsp;of&nbsp;references&nbsp;of&nbsp;type&nbsp;Subscriber</tt></dd></dl>
+
+<dl><dt><a name="Manager-addItem"><strong>addItem</strong></a>(self, item)</dt><dd><tt>Adds&nbsp;a&nbsp;new&nbsp;item&nbsp;to&nbsp;the&nbsp;system<br>
+Needs&nbsp;to&nbsp;be&nbsp;of&nbsp;type&nbsp;Item,&nbsp;otherwise&nbsp;returns&nbsp;error&nbsp;message<br>
+:param&nbsp;item&nbsp;Item:&nbsp;reference&nbsp;to&nbsp;new&nbsp;item&nbsp;object&nbsp;to&nbsp;be&nbsp;added</tt></dd></dl>
+
+<dl><dt><a name="Manager-addSubscriber"><strong>addSubscriber</strong></a>(self, subscriber)</dt><dd><tt>Adds&nbsp;a&nbsp;new&nbsp;subscriber&nbsp;to&nbsp;the&nbsp;system<br>
+Needs&nbsp;to&nbsp;be&nbsp;of&nbsp;type&nbsp;Subscriber,&nbsp;otherwise&nbsp;returns&nbsp;error&nbsp;message<br>
+:param&nbsp;subscriber&nbsp;Subscriber:&nbsp;reference&nbsp;to&nbsp;new&nbsp;subscriber&nbsp;object&nbsp;to&nbsp;be&nbsp;added</tt></dd></dl>
+
+<dl><dt><a name="Manager-borrowItem"><strong>borrowItem</strong></a>(self, id, name)</dt><dd><tt>Called&nbsp;by&nbsp;subscribers,&nbsp;borrows&nbsp;an&nbsp;item&nbsp;on&nbsp;the&nbsp;system<br>
+The&nbsp;item&nbsp;is&nbsp;moved&nbsp;from&nbsp;the&nbsp;'items'&nbsp;array&nbsp;to&nbsp;the&nbsp;'borrowed'&nbsp;array</tt></dd></dl>
+
+<dl><dt><a name="Manager-broadcast"><strong>broadcast</strong></a>(self)</dt><dd><tt>Uses&nbsp;class&nbsp;methods&nbsp;to&nbsp;message&nbsp;all&nbsp;Subscribers&nbsp;who&nbsp;have&nbsp;outstanding&nbsp;items&nbsp;due&nbsp;for&nbsp;return<br>
+:return&nbsp;None:</tt></dd></dl>
+
+<dl><dt><a name="Manager-checkDueDates"><strong>checkDueDates</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;item&nbsp;references&nbsp;that&nbsp;are&nbsp;due&nbsp;for&nbsp;return<br>
+:return&nbsp;Array&lt;Item&gt;:&nbsp;items&nbsp;due&nbsp;for&nbsp;return</tt></dd></dl>
+
+<dl><dt><a name="Manager-getBorrowed"><strong>getBorrowed</strong></a>(self)</dt><dd><tt>Returns&nbsp;all&nbsp;references&nbsp;to&nbsp;items&nbsp;that&nbsp;have&nbsp;been&nbsp;borrowed<br>
+:return&nbsp;Array&lt;Item&gt;:</tt></dd></dl>
+
+<dl><dt><a name="Manager-getItems"><strong>getItems</strong></a>(self)</dt><dd><tt>Returns&nbsp;all&nbsp;references&nbsp;to&nbsp;items&nbsp;registered&nbsp;with&nbsp;the&nbsp;manager<br>
+:return&nbsp;Array&lt;Item&gt;:</tt></dd></dl>
+
+<dl><dt><a name="Manager-getSubscriber"><strong>getSubscriber</strong></a>(self, name)</dt><dd><tt>Returns&nbsp;a&nbsp;reference&nbsp;to&nbsp;a&nbsp;subscriber&nbsp;registered&nbsp;with&nbsp;the&nbsp;manager<br>
+:param&nbsp;name&nbsp;String:&nbsp;Name&nbsp;of&nbsp;the&nbsp;subscriber<br>
+:return&nbsp;Array&lt;Subscriber&gt;:</tt></dd></dl>
+
+<dl><dt><a name="Manager-getSubscribers"><strong>getSubscribers</strong></a>(self)</dt><dd><tt>Returns&nbsp;all&nbsp;references&nbsp;to&nbsp;subscribers&nbsp;registered&nbsp;with&nbsp;the&nbsp;manager<br>
+:return&nbsp;Array&lt;Subscriber&gt;:</tt></dd></dl>
+
+<dl><dt><a name="Manager-messageOverDue"><strong>messageOverDue</strong></a>(self, subscriber)</dt><dd><tt>Notifies&nbsp;a&nbsp;subscriber&nbsp;that&nbsp;a&nbsp;book&nbsp;is&nbsp;overdue&nbsp;on&nbsp;the&nbsp;system</tt></dd></dl>
+
+<dl><dt><a name="Manager-returnItem"><strong>returnItem</strong></a>(self, id)</dt><dd><tt>Called&nbsp;by&nbsp;subscribers,&nbsp;returns&nbsp;an&nbsp;item&nbsp;on&nbsp;the&nbsp;system<br>
+The&nbsp;item&nbsp;is&nbsp;moved&nbsp;from&nbsp;the&nbsp;'borrowed'&nbsp;array&nbsp;to&nbsp;the&nbsp;'items'&nbsp;array</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

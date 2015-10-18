@@ -137,4 +137,4 @@ class Manager:
         :return None:
         """
         for i in self.checkDueDates():
-            self.messageOverDue(getSubscriber(i.getBorrowedBy))
+            self.messageOverDue(self.getSubscriber(i.getBorrowedBy()))

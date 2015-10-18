@@ -30,3 +30,6 @@ class Subscriber():
         """
         self.overdue_warnings += 1
         return 'Got message'
+
+    def getName(self):
+        return self.name
